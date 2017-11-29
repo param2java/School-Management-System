@@ -15,6 +15,7 @@ public class StudentDAOImpl extends GenericDAO implements StudentDAO {
          getEntityManager().persist(studentDO);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<StudentDO> getAllStudents() {
 		return (List<StudentDO>)getEntityManager().createQuery(" from Student").getResultList();
